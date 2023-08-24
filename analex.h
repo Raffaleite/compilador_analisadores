@@ -20,49 +20,49 @@ int analex()
 
     if (ch== '+')
     {
-        printf("Linha %d: %d - '+'\n", linhas++, ch);
+
         return '+';
     }
 
     if (ch== '-')
     {
-        printf("Linha %d: %d - '-'\n", linhas++, ch);
+
         return '-';
     }
 
     if (ch== '*')
     {
-        printf("Linha %d: %d - '*'\n", linhas++, ch);
+
         return '*';
     }
 
     if (ch== '/')
     {
-        printf("Linha %d: %d - '/' \n", linhas++, ch);
+
         return '/';
     }
 
     if (ch== '(')
     {
-        printf("Linha %d: %d - '('\n", linhas++, ch);
+
         return '(';
     }
 
     if (ch== ')')
     {
-        printf("Linha %d: %d - ')'\n", linhas++, ch);
+
         return ')';
     }
 
     if (ch== ';')
     {
-        printf("Linha %d: %d - ';'\n", linhas++, ch);
+
         return ';';
     }
 
     if (ch== 'q')
     {
-        printf("Linha %d: %d\n", linhas++, ch);
+
         return 'q';
     }
 
@@ -74,7 +74,7 @@ int analex()
             ch = getchar();
         }
         ungetc(ch, stdin);
-        printf("Linha %d: %d\n", linhas++, tokenval);
+
         return NUM;
     }
 

@@ -42,6 +42,7 @@ void E_linha()
     {
         reconhecer('+');
         T();
+        printf("+ ");
 
         a = desempilha(&p);
         b = desempilha(&p);
@@ -53,6 +54,7 @@ void E_linha()
     {
         reconhecer('-');
         T();
+        printf("- ");
 
         a = desempilha(&p);
         b = desempilha(&p);
@@ -74,6 +76,7 @@ void T_linha()
     {
         reconhecer('*');
         F();
+        printf("* ");
 
         a = desempilha(&p);
         b = desempilha(&p);
@@ -85,6 +88,7 @@ void T_linha()
     {
         reconhecer('/');
         F();
+        printf("/ ");
 
         a = desempilha(&p);
         b = desempilha(&p);
@@ -99,6 +103,7 @@ void F()
     if(token == NUM)
     {
         empilha(&p, tokenval);
+        printf("%d ", tokenval);
         reconhecer(NUM);
 
     }
@@ -119,7 +124,7 @@ int main()
         erro();
     else
     {
-        printf("Resultado da expressao: ");
+        printf("\nResultado da expressao: ");
         mostra(p);
     }
 }
