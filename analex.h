@@ -20,37 +20,37 @@ int analex()
 
     if (ch== '+')
     {
-
+        linhas++;
         return '+';
     }
 
     if (ch== '-')
     {
-
+        linhas++;
         return '-';
     }
 
     if (ch== '*')
     {
-
+        linhas++;
         return '*';
     }
 
     if (ch== '/')
     {
-
+        linhas++;
         return '/';
     }
 
     if (ch== '(')
     {
-
+        linhas++;
         return '(';
     }
 
     if (ch== ')')
     {
-
+        linhas++;
         return ')';
     }
 
@@ -60,11 +60,7 @@ int analex()
         return ';';
     }
 
-    if (ch== 'q')
-    {
 
-        return 'q';
-    }
 
     if (isdigit(ch)){
         tokenval = ch - '0';
@@ -74,6 +70,7 @@ int analex()
             ch = getchar();
         }
         ungetc(ch, stdin);
+        linhas++;
 
         return NUM;
     }

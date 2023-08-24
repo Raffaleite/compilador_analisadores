@@ -51,7 +51,7 @@ void mostra(pilha s)
     {
         while (aux != NULL)
         {
-            printf("Dado = %d\n", aux->dado);
+            printf(" = %d\n", aux->dado);
             aux = aux->prox;
         }
     }

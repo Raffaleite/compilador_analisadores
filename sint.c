@@ -18,7 +18,7 @@ int b;
 
 void erro()
 {
-    printf("Erro sintatico na linha: %d\n", linhas);
+    printf("\nErro sintatico na linha: %d\n", linhas);
     exit(1);
 }
 
@@ -35,6 +35,8 @@ void E()
     T();
     E_linha();
 }
+
+
 
 void E_linha()
 {
@@ -124,7 +126,7 @@ int main()
         erro();
     else
     {
-        printf("\nResultado da expressao: ");
+        printf("\nResultado da expressao:");
         mostra(p);
     }
 }
